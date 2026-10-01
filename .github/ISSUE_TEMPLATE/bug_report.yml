@@ -1,0 +1,30 @@
+name: Bug report
+description: Something in AdverSI behaves incorrectly
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the command or code you ran and the actual vs expected behaviour.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: Ideally a script using `adversi.testing.ScriptedProvider` so it runs without API keys.
+      render: python
+  - type: textarea
+    id: trace
+    attributes:
+      label: Relevant output / trace
+      description: "`adversi inspect result.json --events` or the JSONL trace. Remove any secrets."
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: AdverSI version, Python version, provider
+      placeholder: "0.1.0, Python 3.12, openai:gpt-4o-mini"
+    validations:
+      required: true

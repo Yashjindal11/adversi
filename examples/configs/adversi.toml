@@ -1,0 +1,19 @@
+version = 1
+tools = ["calculator", "fetch_url"]
+
+[models]
+default = "openai:gpt-4o-mini"
+judge = { model = "anthropic:claude-sonnet-4-5", temperature = 0.0 }
+
+[workflow]
+mode = "research"
+profile = "fast"
+domain = "software engineering"
+
+[[agents]]
+role = "skeptic"
+name = "security_reviewer"
+instructions = "Focus on security, data loss and operational failure modes."
+
+[budget]
+max_model_calls = 30

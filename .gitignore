@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# AdverSI runtime artifacts
+.adversi/
+*-result.json
+*-trace.jsonl
+benchmark-results/
+
+# Web
+web/node_modules/
+web/dist/
+web/*.tsbuildinfo
+# Built UI is generated in CI for releases
+src/adversi/server/static/
+
+.DS_Store

@@ -1,0 +1,26 @@
+# Multi-provider configuration example (requires `pip install "adversi[yaml]"`).
+# Independent analysts on different providers, a local skeptic, and a jury of three
+# judges from different model families to reduce correlated judging errors.
+version: 1
+tools: [calculator, fetch_url]
+
+models:
+  default: openai:gpt-4o-mini
+  judge_1: openai:gpt-4o-mini
+  judge_2: anthropic:claude-sonnet-4-5
+  judge_3: gemini:gemini-2.0-flash
+  skeptic: ollama:llama3.1:8b
+  fast: { model: "openai:gpt-4o-mini", temperature: 0.0, max_concurrency: 4 }
+
+agents:
+  - { role: analyst, name: generalist }
+  - { role: statistician, name: quant, model: fast }
+  - { role: domain_expert, name: ops, domain: "airline network operations" }
+
+workflow:
+  mode: jury
+  profile: balanced
+  jurors: 3
+
+budget:
+  max_model_calls: 40

@@ -1,0 +1,5 @@
+{"id": "smoke-1", "question": "What is the capital of Australia?", "answer": "Canberra"}
+{"id": "smoke-2", "question": "How many hours are in a non-leap year?", "answer": "8760", "accepted_answers": ["8,760"]}
+{"id": "smoke-3", "question": "Is the Great Wall of China visible to the naked eye from low Earth orbit under typical conditions? Answer yes or no.", "answer": "no"}
+{"id": "smoke-4", "question": "Which element has atomic number 26?", "answer": "iron"}
+{"id": "smoke-5", "question": "Does correlation between two variables establish that one causes the other? Answer yes or no.", "answer": "no"}

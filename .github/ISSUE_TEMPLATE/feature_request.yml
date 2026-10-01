@@ -1,0 +1,26 @@
+name: Feature or design proposal
+description: Propose a new capability, provider, tool, step or protocol change
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What can't you do today? Who needs it?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: API sketch if relevant. Can it live outside the core (plugin, custom step, custom tool)?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [protocol / result schema, workflows & steps, providers, tools, evaluation, CLI, web UI, docs]
+  - type: textarea
+    id: evidence
+    attributes:
+      label: How would we know it helps?
+      description: For reasoning changes, describe how it could be evaluated with `adversi benchmark`.
